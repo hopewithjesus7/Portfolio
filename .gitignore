@@ -1,0 +1,8 @@
+# 로컬에만 보관하는 원본 스크린샷 (사이트엔 ig-*.jpg 정리본만 게시)
+assets/webtoon/insta-1-Landing.jpg
+assets/webtoon/Insta-2-View Count Post.jpg
+
+# 작업/미리보기 산출물
+_*.png
+_*.html
+assets/img/candidates/

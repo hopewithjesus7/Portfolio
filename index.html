@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0A0A0C" />
+<title>위선자 · AI 콘텐츠 크리에이터 — 포트폴리오</title>
+<meta name="description" content="누적 조회수 7,000만+ · YouTube 구독자 4.2만 · Instagram 9만. 금융·컨설팅에서 AI 콘텐츠로 전환한 크리에이터의 작업. Higgsfield AI CPP 선정." />
+<meta property="og:title" content="위선자 — AI 콘텐츠 크리에이터" />
+<meta property="og:description" content="누적 조회수 7,000만+ · 구독자 4.2만 · 팔로워 9만 · Higgsfield CPP 선정" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="./assets/img/hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap" />
+<style>
+  :root{
+    --bg:#0A0A0C; --bg-soft:#101013; --bg-card:#131318; --ivory:#F2EEE6; --ivory-dim:#C9C4B9;
+    --muted:#928D83; --gold:#C9A96A; --gold-soft:rgba(201,169,106,.14); --line:rgba(201,169,106,.22); --hair:rgba(201,169,106,.32);
+    --serif:"Fraunces",ui-serif,Georgia,serif; --sans:"Pretendard",system-ui,-apple-system,sans-serif;
+    --maxw:1180px; --ease:cubic-bezier(.2,.7,.2,1); --ease2:cubic-bezier(.22,1,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ivory);font-family:var(--sans);line-height:1.65;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;letter-spacing:-.01em;overflow-x:hidden;font-size:16px}
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  ::selection{background:var(--gold);color:#0A0A0C}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+  /* film grain */
+  body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .serif{font-family:var(--serif)}
+
+  /* reveal */
+  [data-rv]{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease2),transform 1s var(--ease2)}
+  [data-rv].in{opacity:1;transform:none}
+  [data-rv][data-d="1"]{transition-delay:.08s}[data-rv][data-d="2"]{transition-delay:.16s}[data-rv][data-d="3"]{transition-delay:.24s}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;border-bottom:1px solid transparent;
+    transition:background .5s var(--ease),backdrop-filter .5s,border-color .5s,padding .4s}
+  nav.solid{background:rgba(10,10,12,.72);backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%);border-bottom-color:var(--line);padding:13px 0}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .brand{display:flex;align-items:baseline;gap:11px}
+  .brand b{font-family:var(--serif);font-weight:400;font-size:1.18rem;letter-spacing:.01em}
+  .brand span{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a.desk{font-size:.84rem;color:var(--muted);transition:color .3s;position:relative}
+  .nav-links a.desk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease)}
+  .nav-links a.desk:hover{color:var(--ivory)}
+  .nav-links a.desk:hover::after{width:100%}
+  .nav-cta{font-size:.8rem;color:var(--gold)!important;border:1px solid var(--line);border-radius:999px;padding:8px 17px;transition:.35s var(--ease)}
+  .nav-cta:hover{background:var(--gold);color:#0A0A0C!important;border-color:var(--gold)}
+
+  /* HERO */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:-8% -4%;z-index:0;will-change:transform;
+    background:radial-gradient(125% 95% at 76% 12%,rgba(201,169,106,.16),transparent 52%),
+      radial-gradient(100% 85% at 12% 92%,rgba(56,66,104,.26),transparent 60%),#08080A}
+  .hero-bg img{position:absolute;inset:0;opacity:.5}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(8,8,10,.5) 0%,rgba(8,8,10,.34) 38%,rgba(8,8,10,.93) 100%)}
+  .hero-in{position:relative;z-index:2;padding:132px 0 70px;width:100%}
+  .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.04;
+    letter-spacing:-.025em;margin:22px 0 0;max-width:15ch}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero .sub{margin-top:26px;max-width:47ch;color:var(--ivory-dim);font-size:clamp(1rem,1.6vw,1.18rem);line-height:1.72}
+  .metrics{display:flex;flex-wrap:wrap;margin:48px 0 42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .metric{flex:1 1 0;min-width:148px;padding:24px 28px 22px;border-left:1px solid var(--line)}
+  .metric:first-child{border-left:0;padding-left:0}
+  .metric .n{font-family:var(--serif);font-weight:300;font-size:clamp(2.1rem,4.6vw,3.2rem);line-height:1;color:var(--ivory);font-variant-numeric:lining-nums}
+  .metric .n s{text-decoration:none;color:var(--gold);font-size:.44em;margin-left:3px;vertical-align:.5em}
+  .metric .l{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:13px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:13px 23px;font-size:.88rem;font-weight:500;
+    transition:.4s var(--ease);border:1px solid var(--line)}
+  .btn .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);transition:.4s}
+  .btn-gold{background:var(--gold);color:#0A0A0C;border-color:var(--gold)}
+  .btn-gold .dot{background:#0A0A0C}
+  .btn-gold:hover{background:transparent;color:var(--gold)}.btn-gold:hover .dot{background:var(--gold)}
+  .btn-ghost{color:var(--ivory)}
+  .btn-ghost:hover{background:var(--gold-soft);border-color:var(--gold);transform:translateY(-2px)}
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;font-size:.66rem;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scroll-hint i{width:1px;height:34px;background:linear-gradient(180deg,var(--gold),transparent);animation:drop 2.2s var(--ease) infinite}
+  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* TRUST */
+  .trust{background:var(--bg-soft);border-bottom:1px solid var(--line);padding:26px 0}
+  .trust-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px clamp(18px,3.4vw,34px);text-align:center}
+  .trust .badge{display:inline-flex;align-items:center;gap:9px;font-size:.9rem;color:var(--ivory-dim)}
+  .trust .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px 1px rgba(201,169,106,.7);flex-shrink:0}
+  .trust .badge b{font-family:var(--serif);color:var(--gold);font-weight:400;font-size:1.02rem}
+  .trust .sep{width:5px;height:5px;border-radius:50%;background:var(--hair)}
+  .trust .muted{font-size:.86rem;color:var(--muted)}
+
+  /* SECTION */
+  section.block{padding:clamp(74px,11vw,134px) 0}
+  .sec-head{max-width:64ch}
+  .sec-head .eyebrow .ix{color:var(--muted);margin-right:8px;font-variant-numeric:tabular-nums}
+  .sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.1;letter-spacing:-.02em;margin:16px 0 0}
+  .sec-head h2 em{font-style:italic;color:var(--gold)}
+  .sec-head p{color:var(--muted);font-size:1.04rem;max-width:56ch;margin-top:18px;line-height:1.8}
+  .sec-top{display:flex;align-items:flex-end;justify-content:space-between;gap:26px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,58px)}
+
+  /* ABOUT */
+  .about{background:var(--bg-soft)}
+  .about-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:clamp(36px,6vw,80px);align-items:start}
+  .about .lead{font-family:var(--serif);font-weight:300;font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.46;letter-spacing:-.01em}
+  .about .lead em{font-style:italic;color:var(--gold)}
+  .about .body{color:var(--ivory-dim);margin-top:24px;font-size:1rem;line-height:1.85}
+  .about .body + .body{margin-top:16px}
+  .biling{margin-top:26px;display:inline-flex;align-items:center;gap:9px;font-size:.82rem;color:var(--gold);
+    border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:var(--gold-soft)}
+  .about-side{border-left:1px solid var(--line);padding-left:28px}
+  .about-side .lbl{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .about-side .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:15px 0;border-bottom:1px solid rgba(201,169,106,.12)}
+  .about-side .row:last-child{border-bottom:0}
+  .about-side .row span{color:var(--muted);font-size:.86rem}
+  .about-side .row b{font-family:var(--serif);font-weight:400;font-size:1.02rem}
+
+  /* WORK */
+  .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,26px);margin-bottom:clamp(18px,2.4vw,26px)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,24px)}
+  .card{position:relative;display:block;border-radius:16px;overflow:hidden;background:var(--bg-card);
+    border:1px solid rgba(201,169,106,.1);transition:transform .55s var(--ease2),border-color .55s,box-shadow .55s}
+  .card:hover{transform:translateY(-7px);border-color:var(--line);box-shadow:0 30px 60px -28px rgba(0,0,0,.85)}
+  .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#1a1a20,#23232b)}
+  .thumb img{transition:transform .8s var(--ease2)}
+  .card:hover .thumb img{transform:scale(1.06)}
+  .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,8,10,.55) 72%,rgba(8,8,10,.9));opacity:.92;transition:.5s}
+  .card:hover .thumb::after{opacity:1}
+  .play{position:absolute;top:14px;left:14px;z-index:3;width:42px;height:42px;border-radius:50%;
+    background:rgba(10,10,12,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;color:var(--ivory);
+    border:1px solid rgba(242,238,230,.34);opacity:0;transform:translateY(-6px);transition:.5s var(--ease2)}
+  .card:hover .play{opacity:1;transform:none}
+  .play svg{width:14px;height:14px;margin-left:2px}
+  .meta{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:18px 20px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+  .meta h3{font-size:.98rem;font-weight:600;letter-spacing:-.01em;line-height:1.4;flex:1;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+  .feature-grid .meta h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.15rem,2vw,1.5rem)}
+  .views{flex-shrink:0;font-family:var(--serif);font-weight:300;font-size:1.05rem;color:var(--gold);text-align:right;white-space:nowrap;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+  .views small{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.14em;color:var(--ivory-dim);margin-top:1px}
+  .tag{font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--gold)}
+  .channel-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    margin-top:46px;padding-top:30px;border-top:1px solid var(--line)}
+  .channel-bar .who{display:flex;align-items:center;gap:14px}
+  .channel-bar .who b{font-family:var(--serif);font-weight:400;font-size:1.3rem}
+  .channel-bar .who span{color:var(--muted);font-size:.86rem}
+  .channel-bar .who span em{font-style:normal;color:var(--gold)}
+
+  /* INSTAGRAM / PROOF */
+  .insta{background:var(--bg-soft)}
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,32px);align-items:stretch}
+  .proof{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0E0E12;
+    display:flex;flex-direction:column;transition:transform .55s var(--ease2),border-color .55s,box-shadow .55s}
+  .proof:hover{transform:translateY(-6px);border-color:var(--hair);box-shadow:0 30px 60px -30px rgba(0,0,0,.85)}
+  .proof .shot{position:relative;background:#08080A;display:grid;place-items:center;padding:clamp(18px,3vw,30px) clamp(18px,3vw,30px) 0}
+  .proof .shot img{width:auto;max-width:100%;max-height:440px;border-radius:10px 10px 0 0;
+    box-shadow:0 -2px 0 rgba(201,169,106,.18),0 24px 50px -24px rgba(0,0,0,.9)}
+  .proof .shot::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;background:linear-gradient(180deg,transparent,#0E0E12)}
+  .proof .cap{padding:20px clamp(20px,3vw,26px) 24px}
+  .proof .cap .k{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .proof .cap b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.15rem,2.2vw,1.5rem);margin-top:8px;line-height:1.3}
+  .proof .cap b s{text-decoration:none;color:var(--gold)}
+  .proof .cap p{color:var(--muted);font-size:.86rem;margin-top:8px;line-height:1.6}
+  .insta-foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    margin-top:46px;padding-top:30px;border-top:1px solid var(--line)}
+  .insta-foot .who{display:flex;align-items:center;gap:14px}
+  .insta-foot .who b{font-family:var(--serif);font-weight:400;font-size:1.3rem}
+  .insta-foot .who span{color:var(--muted);font-size:.86rem}
+  .insta-foot .who span em{font-style:normal;color:var(--gold)}
+
+  /* WEBTOON GALLERY */
+  .wt-head{margin:clamp(56px,8vw,88px) 0 clamp(26px,4vw,38px)}
+  .wt-head .eyebrow{display:block;margin-bottom:14px}
+  .wt-head .eyebrow .ix{color:var(--muted);margin-right:8px;font-variant-numeric:tabular-nums}
+  .wt-title{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.16;letter-spacing:-.02em}
+  .wt-title em{font-style:italic;color:var(--gold)}
+  .wt-sub{color:var(--muted);font-size:.98rem;margin-top:14px;max-width:56ch;line-height:1.78}
+  .webtoon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,18px)}
+  .wcard{position:relative;display:block;border-radius:13px;overflow:hidden;background:var(--bg-card);
+    border:1px solid rgba(201,169,106,.1);aspect-ratio:4/5;
+    transition:transform .55s var(--ease2),border-color .55s,box-shadow .55s}
+  .wcard img{transition:transform .8s var(--ease2)}
+  .wcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(8,8,10,.55));opacity:0;transition:.5s}
+  .wcard:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:0 26px 52px -26px rgba(0,0,0,.85)}
+  .wcard:hover img{transform:scale(1.05)}
+  .wcard:hover::after{opacity:1}
+
+  /* CAPABILITIES */
+  .cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(201,169,106,.12);
+    border:1px solid rgba(201,169,106,.12);border-radius:14px;overflow:hidden}
+  .cap{display:flex;gap:20px;padding:30px clamp(22px,3vw,34px);background:var(--bg);transition:background .4s}
+  .cap:hover{background:var(--bg-card)}
+  .cap .num{font-family:var(--serif);font-weight:300;font-size:1.1rem;color:var(--gold);width:30px;flex-shrink:0}
+  .cap h4{font-size:1.04rem;font-weight:600;letter-spacing:-.01em}
+  .cap p{color:var(--muted);font-size:.9rem;margin-top:8px;line-height:1.65}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+  .chip{font-size:.8rem;color:var(--ivory-dim);background:var(--gold-soft);border:1px solid var(--line);border-radius:999px;padding:9px 16px;transition:.35s var(--ease)}
+  .chip:hover{background:var(--gold);color:#0A0A0C;border-color:var(--gold);transform:translateY(-2px)}
+
+  /* RECOGNITION */
+  .recog-card{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    padding:clamp(40px,6vw,72px);display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,56px);align-items:center;
+    background:radial-gradient(125% 135% at 86% 8%,rgba(201,169,106,.14),transparent 56%),var(--bg-soft)}
+  .recog-card .mark{position:absolute;right:-2%;bottom:-22%;z-index:0;font-family:var(--serif);font-weight:300;font-style:italic;
+    font-size:clamp(11rem,26vw,20rem);line-height:1;color:rgba(201,169,106,.05);pointer-events:none;letter-spacing:-.04em}
+  .recog-card > *{position:relative;z-index:1}
+  .seal{width:clamp(98px,14vw,128px);height:clamp(98px,14vw,128px);border-radius:50%;border:1px solid var(--gold);
+    display:grid;place-items:center;text-align:center;flex-shrink:0;background:rgba(201,169,106,.05)}
+  .seal b{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.1rem);color:var(--gold);line-height:1}
+  .seal span{font-size:.56rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+  .recog-card h3{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2;letter-spacing:-.01em;margin-top:14px}
+  .recog-card h3 em{font-style:italic;color:var(--gold)}
+  .recog-card p{color:var(--muted);max-width:54ch;margin-top:16px;line-height:1.8}
+
+  /* CONTACT */
+  .contact{text-align:center;padding:clamp(80px,12vw,150px) 0 0}
+  .contact .eyebrow{display:block;margin-bottom:24px}
+  .contact h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.06;letter-spacing:-.025em}
+  .contact h2 em{font-style:italic;color:var(--gold)}
+  .contact .mail{display:inline-block;font-family:var(--serif);font-weight:300;font-size:clamp(1.1rem,2.4vw,1.6rem);color:var(--ivory);
+    border-bottom:1px solid var(--line);padding-bottom:6px;margin:34px 0 42px;transition:.4s var(--ease)}
+  .contact .mail:hover{color:var(--gold);border-color:var(--gold);letter-spacing:.02em}
+  .contact .cta-row{justify-content:center}
+  footer{margin-top:clamp(64px,10vw,100px);padding:30px 0;border-top:1px solid rgba(201,169,106,.12)}
+  .foot-in{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);letter-spacing:.03em}
+  .foot-in .brand b{font-family:var(--serif);font-size:.96rem;color:var(--ivory)}
+  .foot-in .links{display:flex;gap:22px}
+  .foot-in .links a{transition:color .3s}.foot-in .links a:hover{color:var(--gold)}
+
+  /* RESPONSIVE */
+  @media(max-width:920px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .webtoon-grid{grid-template-columns:repeat(3,1fr)}
+    .cap-grid{grid-template-columns:1fr}
+    .about-grid{grid-template-columns:1fr}
+    .about-side{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:26px}
+    .recog-card{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .recog-card p{margin-left:auto;margin-right:auto}
+  }
+  @media(max-width:680px){
+    .nav-links a.desk{display:none}
+    .feature-grid{grid-template-columns:1fr}
+    .proof-grid{grid-template-columns:1fr}
+    .metric{flex:1 1 100%;border-left:0;padding:18px 0;border-top:1px solid rgba(201,169,106,.12)}
+    .metric:first-child{border-top:0}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 20px}
+    .grid{grid-template-columns:1fr}
+    .webtoon-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    [data-rv]{opacity:1;transform:none;transition:none}
+    .scroll-hint i{animation:none}
+    .hero-bg{transform:none!important}
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><b>위선자</b><span>AI Content Creator</span></a>
+    <div class="nav-links">
+      <a href="#work" class="desk">작업</a>
+      <a href="#insta" class="desk">증명</a>
+      <a href="#cap" class="desk">역량</a>
+      <a href="#about" class="desk">소개</a>
+      <a href="#contact" class="nav-cta">연락하기 →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg" id="heroBg"><img src="./assets/img/hero.jpg" alt="" width="1376" height="768" onerror="this.remove()" /></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow" data-rv>AI Content Creator · 기획부터 분석까지 직접</p>
+    <h1 data-rv data-d="1">생성형 AI로<br><em>조회수를 만드는</em><br>크리에이터</h1>
+    <p class="sub" data-rv data-d="2">금융·컨설팅을 떠나, AI 웹툰과 숏폼으로 누적 7,000만 조회를 쌓았습니다. 기획·AI 제작·게시·채널 브랜딩·반응 분석까지 — 전 과정을 혼자 돌립니다.</p>
+    <div class="metrics" data-rv data-d="2">
+      <div class="metric"><div class="n">7,000<s>만+</s></div><div class="l">누적 조회수</div></div>
+      <div class="metric"><div class="n">4.2<s>만</s></div><div class="l">YouTube 구독자</div></div>
+      <div class="metric"><div class="n">9<s>만</s></div><div class="l">Instagram 팔로워</div></div>
+    </div>
+    <div class="cta-row" data-rv data-d="3">
+      <a class="btn btn-gold" href="https://www.youtube.com/@위선자123" target="_blank" rel="noopener"><span class="dot"></span>YouTube 채널 보기</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><span class="dot"></span>Instagram 웹툰</a>
+      <a class="btn btn-ghost" href="mailto:hopewithjesus7@gmail.com"><span class="dot"></span>이메일</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><i></i></div>
+</header>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap trust-in" data-rv>
+    <span class="badge"><span class="dot"></span><b>Higgsfield AI</b> Creator Partner Program 선정</span>
+    <span class="sep"></span>
+    <span class="muted">NYU Stern 금융경제학</span>
+    <span class="sep"></span>
+    <span class="muted">前 EY-Parthenon 컨설턴트</span>
+    <span class="sep"></span>
+    <span class="muted">한국어 · English 바이링구얼</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="block about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow" data-rv><span class="ix">01</span>About</p>
+      <p class="lead" data-rv data-d="1">숫자를 읽던 사람이, 이제 <em>조회수를 만듭니다.</em></p>
+      <p class="body" data-rv data-d="2">NYU Stern에서 금융경제학을 전공하고 EY 파르테논에서 컨설턴트(대리급, 2020–2023)로 일했습니다. 데이터로 의사결정을 내리던 감각을 그대로 콘텐츠로 옮겨, AI 제작으로 완전히 전환했습니다.</p>
+      <p class="body" data-rv data-d="2">지금은 기획·제작·게시·채널 브랜딩·반응 분석까지 직접 운영합니다. "예쁘다"가 아니라 "먹힌다"를 숫자로 검증하며 만듭니다. 결과는 옆에 그대로 있습니다 — 누적 7,000만 조회, 9만 팔로워.</p>
+      <span class="biling" data-rv data-d="2">🌐 한국어 · English 콘텐츠 동시 운영</span>
+    </div>
+    <div class="about-side" data-rv data-d="1">
+      <p class="lbl">Profile</p>
+      <div class="row"><span>학력</span><b>NYU Stern</b></div>
+      <div class="row"><span>경력</span><b>EY-Parthenon</b></div>
+      <div class="row"><span>전문</span><b>AI 콘텐츠 제작</b></div>
+      <div class="row"><span>누적 조회수</span><b style="color:var(--gold)">7,000만+</b></div>
+      <div class="row"><span>채널 개설</span><b>2023</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="sec-top">
+      <div class="sec-head">
+        <p class="eyebrow" data-rv><span class="ix">02</span>Selected Work · YouTube</p>
+        <h2 data-rv data-d="1">화면 안에서 <em>증명된 결과물</em></h2>
+        <p data-rv data-d="2">AI 웹툰형 스토리텔링부터 Seedance 애니메이션, 숏폼까지. 썸네일을 누르면 영상으로 이동합니다.</p>
+      </div>
+      <a class="btn btn-ghost" data-rv data-d="2" href="https://www.youtube.com/@위선자123" target="_blank" rel="noopener"><span class="dot"></span>채널 전체 보기</a>
+    </div>
+
+    <div class="feature-grid">
+      <a class="card" data-rv href="https://youtu.be/fcAsUJ-NT1E" target="_blank" rel="noopener" aria-label="AI로 나만의 웹툰 만들기 · 조회수 3.2만">
+        <div class="thumb"><img src="./assets/thumbs/ai-webtoon.jpg" alt="AI로 나만의 웹툰 만들기 썸네일" width="1280" height="720" loading="lazy" />
+          <span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>AI로 나만의 웹툰 만들기</h3><span class="views">3.2만<small>VIEWS</small></span></div>
+      </a>
+      <a class="card" data-rv data-d="1" href="https://youtu.be/C-uPcAIO8ns" target="_blank" rel="noopener" aria-label="몽글툰 애니메이션 늦잠 · Seedance 2.0 · 조회수 2.7만">
+        <div class="thumb"><img src="./assets/thumbs/monggletoon-nap.jpg" alt="몽글툰 애니메이션 늦잠 썸네일" width="1280" height="720" loading="lazy" />
+          <span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>몽글툰 애니메이션: 늦잠 <span class="tag">· Seedance 2.0</span></h3><span class="views">2.7만<small>VIEWS</small></span></div>
+      </a>
+    </div>
+
+    <div class="grid">
+      <a class="card" data-rv href="https://youtu.be/B1NZVB-DSQ4" target="_blank" rel="noopener" aria-label="관계기술훈련 2 · 조회수 1.4만">
+        <div class="thumb"><img src="./assets/thumbs/relation-training.jpg" alt="관계기술훈련 2 썸네일" width="1280" height="720" loading="lazy" /><span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>관계기술훈련 #2</h3><span class="views">1.4만<small>VIEWS</small></span></div>
+      </a>
+      <a class="card" data-rv data-d="1" href="https://youtu.be/UDKuHQRL4ck" target="_blank" rel="noopener" aria-label="고양이가 놀란 이유 · 조회수 9.8천">
+        <div class="thumb"><img src="./assets/thumbs/cat-surprised.jpg" alt="고양이가 놀란 이유 썸네일" width="1280" height="720" loading="lazy" /><span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>고양이가 놀란 이유</h3><span class="views">9.8천<small>VIEWS</small></span></div>
+      </a>
+      <a class="card" data-rv data-d="2" href="https://youtu.be/Sd4yaJOE41M" target="_blank" rel="noopener" aria-label="마음에 힐링을 주는 전시 · 조회수 7.3천">
+        <div class="thumb"><img src="./assets/thumbs/exhibition.jpg" alt="마음에 힐링을 주는 전시 썸네일" width="1280" height="720" loading="lazy" /><span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>마음에 힐링을 주는 전시</h3><span class="views">7.3천<small>VIEWS</small></span></div>
+      </a>
+      <a class="card" data-rv data-d="3" href="https://youtu.be/vJQAqzr4Aq0" target="_blank" rel="noopener" aria-label="나사렛 몽키스패너 · 조회수 6.9천">
+        <div class="thumb"><img src="./assets/thumbs/nazareth.jpg" alt="나사렛 몽키스패너 썸네일" width="1280" height="720" loading="lazy" /><span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>나사렛 몽키스패너</h3><span class="views">6.9천<small>VIEWS</small></span></div>
+      </a>
+      <a class="card" data-rv href="https://youtu.be/yLMHP8cqSOI" target="_blank" rel="noopener" aria-label="십자가형 체험하기 · 조회수 6.4천">
+        <div class="thumb"><img src="./assets/thumbs/cross-experience.jpg" alt="십자가형 체험하기 썸네일" width="1280" height="720" loading="lazy" /><span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>십자가형 체험하기</h3><span class="views">6.4천<small>VIEWS</small></span></div>
+      </a>
+      <a class="card" data-rv data-d="1" href="https://youtu.be/-PHWAJsNfNE" target="_blank" rel="noopener" aria-label="눈 안으로 퐁당 · 조회수 5.7천">
+        <div class="thumb"><img src="./assets/thumbs/snow-pong.jpg" alt="눈 안으로 퐁당 썸네일" width="1280" height="720" loading="lazy" /><span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>눈 안으로 퐁당</h3><span class="views">5.7천<small>VIEWS</small></span></div>
+      </a>
+      <a class="card" data-rv data-d="2" href="https://youtu.be/RSrOhwibpo4" target="_blank" rel="noopener" aria-label="크리스천도 불안할 수 있습니다 AI 홍보자료 · 조회수 2.8천">
+        <div class="thumb"><img src="./assets/thumbs/christian-anxious.jpg" alt="크리스천도 불안할 수 있습니다 홍보자료 썸네일" width="1280" height="720" loading="lazy" /><span class="play"><svg viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></span></div>
+        <div class="meta"><h3>『크리스천도 불안할 수 있습니다』 AI 홍보자료</h3><span class="views">2.8천<small>VIEWS</small></span></div>
+      </a>
+    </div>
+
+    <div class="channel-bar" data-rv>
+      <div class="who"><b>위선자</b><span>@위선자123 · <em>구독자 4.29만</em> · 2023 개설</span></div>
+      <a class="btn btn-gold" href="https://www.youtube.com/@위선자123" target="_blank" rel="noopener"><span class="dot"></span>YouTube에서 구독하기</a>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM / PROOF -->
+<section class="block insta" id="insta">
+  <div class="wrap">
+    <div class="sec-top">
+      <div class="sec-head">
+        <p class="eyebrow" data-rv><span class="ix">03</span>Instagram · 실측 데이터</p>
+        <h2 data-rv data-d="1">말이 아니라, <em>숫자로 증명</em></h2>
+        <p data-rv data-d="2">AI 웹툰을 올리는 @dnltjswk12 계정의 실제 인스타그램 화면입니다. 90일 조회 6,780만, 팔로워 9만 — 캡처 그대로.</p>
+      </div>
+      <a class="btn btn-ghost" data-rv data-d="2" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><span class="dot"></span>계정 방문하기</a>
+    </div>
+    <div class="proof-grid">
+      <a class="proof" data-rv href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener">
+        <div class="shot"><img src="./assets/webtoon/ig-insights.jpg" alt="인스타그램 인사이트 캡처 — 최근 90일 조회수 67,804,452" width="1080" height="2106" loading="lazy" onerror="this.closest('.proof').style.display='none'" /></div>
+        <div class="cap"><span class="k">90일 조회수</span><b>67,804,<s>452</s></b><p>최근 90일 단일 게시물 인사이트. 비팔로워 도달 72.2% — 알고리즘이 미는 콘텐츠라는 뜻입니다.</p></div>
+      </a>
+      <a class="proof" data-rv data-d="1" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener">
+        <div class="shot"><img src="./assets/webtoon/ig-profile.jpg" alt="인스타그램 프로필 캡처 — 위선자, 팔로워 9만, AI 웹툰 게시물" width="1080" height="2106" loading="lazy" onerror="this.closest('.proof').style.display='none'" /></div>
+        <div class="cap"><span class="k">계정 프로필</span><b>팔로워 <s>9만</s> · 게시물 62</b><p>@dnltjswk12 · AI 웹툰 시리즈 운영. 몽글이 캐릭터 기반의 일관된 세계관으로 채널을 브랜딩합니다.</p></div>
+      </a>
+    </div>
+
+    <div class="wt-head" data-rv>
+      <p class="eyebrow"><span class="ix">03b</span>웹툰 작품 · Selected Panels</p>
+      <h3 class="wt-title">이 숫자를 만든 <em>몽글이 웹툰</em></h3>
+      <p class="wt-sub">Instagram에 연재한 AI 웹툰 컷. 42화까지 이어온 몽글이 세계관 — 큐트한 일상부터 시네마틱한 연출까지, 하나의 그림체로 끌고 갑니다.</p>
+    </div>
+    <div class="webtoon-grid">
+      <a class="wcard" data-rv href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-1.jpg" alt="몽글이 AI 웹툰 컷 — 일상 에피소드" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+      <a class="wcard" data-rv data-d="1" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-2.jpg" alt="몽글이 AI 웹툰 컷 — 캐릭터 장면" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+      <a class="wcard" data-rv data-d="2" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-3.jpg" alt="몽글이 AI 웹툰 컷 — 감정 연출" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+      <a class="wcard" data-rv data-d="3" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-4.jpg" alt="몽글이 AI 웹툰 컷 — 군중 장면" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+      <a class="wcard" data-rv href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-5.jpg" alt="몽글이 AI 웹툰 컷 — 시네마틱 연출" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+      <a class="wcard" data-rv data-d="1" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-6.jpg" alt="몽글이 AI 웹툰 컷 — 달밤 장면" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+      <a class="wcard" data-rv data-d="2" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-7.jpg" alt="몽글이 AI 웹툰 컷 — 긴장 시퀀스" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+      <a class="wcard" data-rv data-d="3" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><img src="./assets/webtoon/work-8.jpg" alt="몽글이 AI 웹툰 컷 — 클라이맥스" width="1080" height="1350" loading="lazy" onerror="this.closest('.wcard').style.display='none'" /></a>
+    </div>
+
+    <div class="insta-foot" data-rv>
+      <div class="who"><b>@dnltjswk12</b><span>AI 웹툰 · <em>팔로워 약 9만</em> · Instagram</span></div>
+      <a class="btn btn-gold" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><span class="dot"></span>Instagram에서 더 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="block" id="cap">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:clamp(40px,6vw,58px)">
+      <p class="eyebrow" data-rv><span class="ix">04</span>Capabilities · 작업 방식</p>
+      <h2 data-rv data-d="1">기획부터 분석까지, <em>혼자 다 합니다</em></h2>
+      <p data-rv data-d="2">어느 한 단계도 외주 없이 직접 만들고 측정합니다. 생성형 AI 워크플로우를 직접 설계해 빠르게 만들고, 숫자로 검증합니다.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap" data-rv><span class="num">01</span><div><h4>AI 웹툰형 스토리텔링</h4><p>캐릭터·연출·대사까지 일관된 세계관으로 시리즈화. 끝까지 보게 만드는 기획.</p></div></div>
+      <div class="cap" data-rv data-d="1"><span class="num">02</span><div><h4>숏폼 · AI 애니메이션</h4><p>Seedance 등으로 정지 이미지를 움직임으로. 후킹 중심의 숏폼 편집.</p></div></div>
+      <div class="cap" data-rv><span class="num">03</span><div><h4>생성형 AI 워크플로우 구축</h4><p>반복 가능한 제작 파이프라인을 직접 설계해 퀄리티와 속도를 동시에.</p></div></div>
+      <div class="cap" data-rv data-d="1"><span class="num">04</span><div><h4>한·영 카피 · 글로벌 현지화</h4><p>제목·설명·홍보문구를 양쪽 언어로. 시장에 맞춰 톤과 포맷을 현지화.</p></div></div>
+      <div class="cap" data-rv><span class="num">05</span><div><h4>채널 브랜딩</h4><p>썸네일·톤·네이밍까지 채널 전체의 결을 하나로 잡아 정체성을 만듭니다.</p></div></div>
+      <div class="cap" data-rv data-d="1"><span class="num">06</span><div><h4>시청자 반응 분석</h4><p>조회수·유지율·댓글을 읽고 다음 콘텐츠 방향을 데이터로 결정.</p></div></div>
+    </div>
+    <div class="chips">
+      <span class="chip" data-rv>Higgsfield AI</span>
+      <span class="chip" data-rv data-d="1">Seedance</span>
+      <span class="chip" data-rv data-d="1">생성형 AI 이미지</span>
+      <span class="chip" data-rv data-d="2">생성형 AI 영상</span>
+      <span class="chip" data-rv data-d="2">숏폼 편집</span>
+      <span class="chip" data-rv data-d="3">한 / 영 현지화</span>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="block" id="recognition">
+  <div class="wrap">
+    <div class="recog-card" data-rv>
+      <div class="mark" aria-hidden="true">CPP</div>
+      <div class="seal"><b>CPP</b><span>Selected</span></div>
+      <div>
+        <p class="eyebrow"><span class="ix">05</span>Recognition</p>
+        <h3><em>Higgsfield AI</em> Creator Partner Program 선정</h3>
+        <p>글로벌 생성형 AI 영상 플랫폼 Higgsfield의 크리에이터 파트너(CPP)로 선정되었습니다. 만들기만 하는 게 아니라, 플랫폼이 공식적으로 인정한 제작 역량이라는 뜻입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" data-rv>Let's work together</span>
+    <h2 data-rv data-d="1">AI 콘텐츠,<br><em>같이 만들 사람을 찾는다면.</em></h2>
+    <a class="mail" data-rv data-d="2" href="mailto:hopewithjesus7@gmail.com">hopewithjesus7@gmail.com</a>
+    <div class="cta-row" data-rv data-d="2">
+      <a class="btn btn-gold" href="mailto:hopewithjesus7@gmail.com"><span class="dot"></span>이메일 보내기</a>
+      <a class="btn btn-ghost" href="https://www.youtube.com/@위선자123" target="_blank" rel="noopener"><span class="dot"></span>YouTube</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/dnltjswk12/" target="_blank" rel="noopener"><span class="dot"></span>Instagram</a>
+    </div>
+    <div class="foot-in">
+      <span class="brand"><b>위선자</b> · AI Content Creator</span>
+      <span class="links">© 2026 · 누적 조회수 7,000만+ · 한·영 바이링구얼</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){nav.classList.toggle('solid',window.scrollY>40)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero parallax — gated by reduced-motion, rAF-throttled */
+  var bg=document.getElementById('heroBg');
+  if(bg && !reduce){
+    var ticking=false;
+    var para=function(){
+      var y=window.scrollY;
+      if(y<window.innerHeight){bg.style.transform='translate3d(0,'+(y*0.18)+'px,0) scale(1.06)'}
+      ticking=false;
+    };
+    window.addEventListener('scroll',function(){
+      if(!ticking){window.requestAnimationFrame(para);ticking=true}
+    },{passive:true});
+    para();
+  }
+
+  /* scroll reveal */
+  var items=document.querySelectorAll('[data-rv]');
+  if(!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  items.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
